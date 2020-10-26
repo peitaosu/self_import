@@ -1,6 +1,6 @@
 import sys, subprocess
 
-def ensure_import(module_name)
+def ensure_import(module_name):
     try:
         __import__(module_name)
     except:
