@@ -8,7 +8,7 @@ def ensure_import(module_name):
         subprocess.check_call([sys.executable, "-m", "pip", "install", module_name])
         return  __import__(module_name)
 
-def update_path(path = None):
+def update_lib_path(path = None):
     sys.path.append([sys.executable, "Lib", "site-packages"])
     if path:
         sys.path.append(path)
