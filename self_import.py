@@ -11,9 +11,6 @@ def ensure_import(module_name, dest_path=None):
             subprocess.check_call([sys.executable, "-m", "pip", "install", module_name])
         return  __import__(module_name)
 
-def update_lib_path(path):
-    sys.path.append(path)
-
 def install_dependencies(dep_file, dest_path=None):
     subprocess.check_call([sys.executable, "-m", "ensurepip"])
     if dest_path:
