@@ -7,6 +7,7 @@ def ensure_import(module_name, dest_path=None):
         subprocess.check_call([sys.executable, "-m", "ensurepip"])
         if dest_path:
             subprocess.check_call([sys.executable, "-m", "pip", "install", module_name, "-t", dest_path])
+            sys.append(dest_path)
         else:
             subprocess.check_call([sys.executable, "-m", "pip", "install", module_name])
         return  __import__(module_name)
